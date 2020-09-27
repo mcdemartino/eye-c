@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang=en>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <style>
+
+        .body { background-image: url('https://res.cloudinary.com/allhailmc/image/upload/v1600949640/Eyez/eyezcloudinary/26.png'); 
+            background-size: cover ;
+            text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        }
+
+        .container{
+            background-color:#6414F6;
+            width:3500px;
+            height: 3500px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        
+        .button {
+            border-radius: 50%;
+            border: 2px solid #D203FF;
+            width: 4000px;
+            height: 4000px;
+            margin-top: 1px;
+            margin-left: 1px;
+        }
+        
+
+        .video{
+           position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            min-width:100%;
+            min-height:100%;
+            width:auto;
+            height:auto;
+            z-index:1;
+        }
+       
+        .text{
+            z-index: 2;
+            position: absolute;
+            top:0;
+            bottom: 0;
+            left:0;
+            right:0;
+
+            
+        }
+        .img{
+            z-index: 3;
+            position:sticky;
+            top:auto;
+            bottom:auto;
+            left:auto;
+            right:auto;
+        }
+       
+    </style>
+ <title>eyeSea</title>
+
+<body onclick="changeImage()">
+    <nav class="ui three item menu">
+
+        <a class="item" href="index2.html">&#9064;</a>
+        <a class="item" href="indexTwo.html">&#8981;</a>
+        <a class="item" href="indexThree.html">&#8966;</a>
+    
+<div class ="container">
+    <p>
+        <img alt="" src="https://res.cloudinary.com/allhailmc/image/upload/v1601184708/Eyez/eyezcloudinary/0.png" 
+            style="height: 1500px; width: 1500px">
+</p>
+    <div class ="video"> 
+        <img src="eyezyes/backc/2.mov"></img></div>
+   
+   <div id="actualeyeTYPE" >
+           <h1>eye c</h1>
+           </div>
+           <p id="text"></p>
+        </div>
+   <div id="img">
+    <img src="https://res.cloudinary.com/allhailmc/image/upload/v1601184708/Eyez/eyezcloudinary/0.png"></img>
+    </div>
+
+
+   </div>
+
+
+</body>
+
+    <script> 
+    const myCanvas =
+    document.querySelector('container');
+    const images =[
+        images1='https://res.cloudinary.com/allhailmc/image/upload/v1600949644/Eyez/eyezcloudinary/1.png',
+        images2='https://res.cloudinary.com/allhailmc/image/upload/v1600949643/Eyez/eyezcloudinary/2.png',
+        images3='https://res.cloudinary.com/allhailmc/image/upload/v1600949643/Eyez/eyezcloudinary/3.png',
+        images4='https://res.cloudinary.com/allhailmc/image/upload/v1600949643/Eyez/eyezcloudinary/4.png',
+        images5='https://res.cloudinary.com/allhailmc/image/upload/v1600949643/Eyez/eyezcloudinary/5.png',
+        images6='https://res.cloudinary.com/allhailmc/image/upload/v1600949643/Eyez/eyezcloudinary/6.png',
+        images7='https://res.cloudinary.com/allhailmc/image/upload/v1600949643/Eyez/eyezcloudinary/7.png',
+        images8='https://res.cloudinary.com/allhailmc/image/upload/v1600949642/Eyez/eyezcloudinary/8.png',
+        images9='https://res.cloudinary.com/allhailmc/image/upload/v1600949642/Eyez/eyezcloudinary/9.png',
+        images10='https://res.cloudinary.com/allhailmc/image/upload/v1600949642/Eyez/eyezcloudinary/10.png',
+        images11='https://res.cloudinary.com/allhailmc/image/upload/v1600949642/Eyez/eyezcloudinary/11.png',
+        images12='https://res.cloudinary.com/allhailmc/image/upload/v1600949642/Eyez/eyezcloudinary/12.png',
+        images13='https://res.cloudinary.com/allhailmc/image/upload/v1600949642/Eyez/eyezcloudinary/13.png',
+        images14='https://res.cloudinary.com/allhailmc/image/upload/v1600949642/Eyez/eyezcloudinary/14.png',
+        images15='https://res.cloudinary.com/allhailmc/image/upload/v1600949641/Eyez/eyezcloudinary/15.png',
+        images16='https://res.cloudinary.com/allhailmc/image/upload/v1600949641/Eyez/eyezcloudinary/16.png',
+        images17='https://res.cloudinary.com/allhailmc/image/upload/v1600949641/Eyez/eyezcloudinary/17.png',
+        images18='https://res.cloudinary.com/allhailmc/image/upload/v1600949641/Eyez/eyezcloudinary/18.png',
+        images19='https://res.cloudinary.com/allhailmc/image/upload/v1600949641/Eyez/eyezcloudinary/19.png',
+        images20='https://res.cloudinary.com/allhailmc/image/upload/v1600949641/Eyez/eyezcloudinary/20.png',
+        images21='https://res.cloudinary.com/allhailmc/image/upload/v1600949640/Eyez/eyezcloudinary/21.png',
+        images22='https://res.cloudinary.com/allhailmc/image/upload/v1600949640/Eyez/eyezcloudinary/22.png',
+        images23='https://res.cloudinary.com/allhailmc/image/upload/v1600949640/Eyez/eyezcloudinary/23.png',
+        images24='https://res.cloudinary.com/allhailmc/image/upload/v1600949640/Eyez/eyezcloudinary/24.png',
+        images25='https://res.cloudinary.com/allhailmc/image/upload/v1600949640/Eyez/eyezcloudinary/25.png',
+        images26='https://res.cloudinary.com/allhailmc/image/upload/v1600949640/Eyez/eyezcloudinary/26.png',
+        images27='https://res.cloudinary.com/allhailmc/image/upload/v1600949640/Eyez/eyezcloudinary/27.png',
+        images28='https://res.cloudinary.com/allhailmc/image/upload/v1600949640/Eyez/eyezcloudinary/28.png',
+        images29='https://res.cloudinary.com/allhailmc/image/upload/v1600949640/Eyez/eyezcloudinary/29.png',
+        images30='https://res.cloudinary.com/allhailmc/image/upload/v1600949639/Eyez/eyezcloudinary/30.png',
+        images31='https://res.cloudinary.com/allhailmc/image/upload/v1600949639/Eyez/eyezcloudinary/31.png',
+        images32='https://res.cloudinary.com/allhailmc/image/upload/v1600949639/Eyez/eyezcloudinary/32.png',
+        images33='https://res.cloudinary.com/allhailmc/image/upload/v1600949639/Eyez/eyezcloudinary/33.png',
+        images34='https://res.cloudinary.com/allhailmc/image/upload/v1600949639/Eyez/eyezcloudinary/34.png',
+        images35='https://res.cloudinary.com/allhailmc/image/upload/v1600949639/Eyez/eyezcloudinary/35.png',
+        images36='https://res.cloudinary.com/allhailmc/image/upload/v1600949638/Eyez/eyezcloudinary/36.png',
+        images37='https://res.cloudinary.com/allhailmc/image/upload/v1600949638/Eyez/eyezcloudinary/37.png',
+        images38='https://res.cloudinary.com/allhailmc/image/upload/v1600949638/Eyez/eyezcloudinary/38.png',
+        images39='https://res.cloudinary.com/allhailmc/image/upload/v1600949638/Eyez/eyezcloudinary/39.png',
+        images40='https://res.cloudinary.com/allhailmc/image/upload/v1600949638/Eyez/eyezcloudinary/40.png',
+        images41='https://res.cloudinary.com/allhailmc/image/upload/v1600949638/Eyez/eyezcloudinary/41.png',
+        images42='https://res.cloudinary.com/allhailmc/image/upload/v1600949638/Eyez/eyezcloudinary/42.png',
+        images43='https://res.cloudinary.com/allhailmc/image/upload/v1600949638/Eyez/eyezcloudinary/43.png',
+        images44='https://res.cloudinary.com/allhailmc/image/upload/v1600949638/Eyez/eyezcloudinary/44.png',
+        images45='https://res.cloudinary.com/allhailmc/image/upload/v1600949638/Eyez/eyezcloudinary/45.png',
+        images46='https://res.cloudinary.com/allhailmc/image/upload/v1600949637/Eyez/eyezcloudinary/46.png',
+        images47='https://res.cloudinary.com/allhailmc/image/upload/v1600949637/Eyez/eyezcloudinary/47.png',
+        images48='https://res.cloudinary.com/allhailmc/image/upload/v1600949637/Eyez/eyezcloudinary/48.png',
+        images49='https://res.cloudinary.com/allhailmc/image/upload/v1600949637/Eyez/eyezcloudinary/49.png',
+        images50='https://res.cloudinary.com/allhailmc/image/upload/v1600949637/Eyez/eyezcloudinary/50.png',
+        images51='https://res.cloudinary.com/allhailmc/image/upload/v1600949637/Eyez/eyezcloudinary/51.png',
+        images52='https://res.cloudinary.com/allhailmc/image/upload/v1600949637/Eyez/eyezcloudinary/52.png',
+        images53='https://res.cloudinary.com/allhailmc/image/upload/v1600949637/Eyez/eyezcloudinary/53.png',
+        images54='https://res.cloudinary.com/allhailmc/image/upload/v1600949637/Eyez/eyezcloudinary/54.png',
+        images55='https://res.cloudinary.com/allhailmc/image/upload/v1600949636/Eyez/eyezcloudinary/55.png',
+        images56='https://res.cloudinary.com/allhailmc/image/upload/v1600949636/Eyez/eyezcloudinary/56.png',
+        images57='https://res.cloudinary.com/allhailmc/image/upload/v1600949636/Eyez/eyezcloudinary/57.png',
+        images58='https://res.cloudinary.com/allhailmc/image/upload/v1600949636/Eyez/eyezcloudinary/58.png',
+        images59='https://res.cloudinary.com/allhailmc/image/upload/v1600949636/Eyez/eyezcloudinary/59.png',
+        images60='https://res.cloudinary.com/allhailmc/image/upload/v1600949636/Eyez/eyezcloudinary/60.png',
+        images61='https://res.cloudinary.com/allhailmc/image/upload/v1600949636/Eyez/eyezcloudinary/61.png',
+        images62='https://res.cloudinary.com/allhailmc/image/upload/v1600949636/Eyez/eyezcloudinary/62.png',
+        images63='https://res.cloudinary.com/allhailmc/image/upload/v1600949635/Eyez/eyezcloudinary/63.png',
+        images64='https://res.cloudinary.com/allhailmc/image/upload/v1600949635/Eyez/eyezcloudinary/64.png',
+        images65='https://res.cloudinary.com/allhailmc/image/upload/v1600949635/Eyez/eyezcloudinary/65.png',
+        images66='https://res.cloudinary.com/allhailmc/image/upload/v1600949635/Eyez/eyezcloudinary/66.png',
+        images67='https://res.cloudinary.com/allhailmc/image/upload/v1600949635/Eyez/eyezcloudinary/67.png',
+        images68='https://res.cloudinary.com/allhailmc/image/upload/v1600949635/Eyez/eyezcloudinary/68.png',
+        images69='https://res.cloudinary.com/allhailmc/image/upload/v1600949635/Eyez/eyezcloudinary/69.png',
+        images70='https://res.cloudinary.com/allhailmc/image/upload/v1600949634/Eyez/eyezcloudinary/70.png',
+        images71='https://res.cloudinary.com/allhailmc/image/upload/v1600949634/Eyez/eyezcloudinary/71.png',
+        images72='https://res.cloudinary.com/allhailmc/image/upload/v1600949634/Eyez/eyezcloudinary/72.png',
+        images73='https://res.cloudinary.com/allhailmc/image/upload/v1600949634/Eyez/eyezcloudinary/73.png',
+        images74='https://res.cloudinary.com/allhailmc/image/upload/v1600949634/Eyez/eyezcloudinary/74.png',
+        images75='https://res.cloudinary.com/allhailmc/image/upload/v1600949634/Eyez/eyezcloudinary/75.png',
+        images76='https://res.cloudinary.com/allhailmc/image/upload/v1600949634/Eyez/eyezcloudinary/76.png',
+        images77='https://res.cloudinary.com/allhailmc/image/upload/v1600949634/Eyez/eyezcloudinary/77.png',
+        images78='https://res.cloudinary.com/allhailmc/image/upload/v1600949634/Eyez/eyezcloudinary/78.png',
+        images79='https://res.cloudinary.com/allhailmc/image/upload/v1600949634/Eyez/eyezcloudinary/79.png',
+        images80='https://res.cloudinary.com/allhailmc/image/upload/v1600949633/Eyez/eyezcloudinary/80.png',
+        images81='https://res.cloudinary.com/allhailmc/image/upload/v1600949633/Eyez/eyezcloudinary/81.png',
+        images82='https://res.cloudinary.com/allhailmc/image/upload/v1600949633/Eyez/eyezcloudinary/82.png',
+        images83='https://res.cloudinary.com/allhailmc/image/upload/v1600949633/Eyez/eyezcloudinary/83.png',
+        images84='https://res.cloudinary.com/allhailmc/image/upload/v1600949633/Eyez/eyezcloudinary/84.png',
+        images85='https://res.cloudinary.com/allhailmc/image/upload/v1600949633/Eyez/eyezcloudinary/85.png',
+        images86='https://res.cloudinary.com/allhailmc/image/upload/v1600949632/Eyez/eyezcloudinary/86.png',
+        images87='https://res.cloudinary.com/allhailmc/image/upload/v1600949632/Eyez/eyezcloudinary/87.png',
+        images88='https://res.cloudinary.com/allhailmc/image/upload/v1600949632/Eyez/eyezcloudinary/88.png',
+        images89='https://res.cloudinary.com/allhailmc/image/upload/v1600949632/Eyez/eyezcloudinary/89.png',
+        images90='https://res.cloudinary.com/allhailmc/image/upload/v1600949632/Eyez/eyezcloudinary/90.png',
+        images91='https://res.cloudinary.com/allhailmc/image/upload/v1600949632/Eyez/eyezcloudinary/91.png',
+        images92='https://res.cloudinary.com/allhailmc/image/upload/v1600949632/Eyez/eyezcloudinary/92.png',
+        images93='https://res.cloudinary.com/allhailmc/image/upload/v1600949632/Eyez/eyezcloudinary/93.png',
+        images94=' https://res.cloudinary.com/allhailmc/image/upload/v1600949631/Eyez/eyezcloudinary/94.png',
+        images95='https://res.cloudinary.com/allhailmc/image/upload/v1600949631/Eyez/eyezcloudinary/95.png',
+        images96='https://res.cloudinary.com/allhailmc/image/upload/v1600949631/Eyez/eyezcloudinary/96.jpg',
+        images97='https://res.cloudinary.com/allhailmc/image/upload/v1600949631/Eyez/eyezcloudinary/97.png',
+        images98='https://res.cloudinary.com/allhailmc/image/upload/v1600949631/Eyez/eyezcloudinary/98.png',
+        images99='https://res.cloudinary.com/allhailmc/image/upload/v1600949631/Eyez/eyezcloudinary/99.png',
+        images100='https://res.cloudinary.com/allhailmc/image/upload/v1600949630/Eyez/eyezcloudinary/100.png',
+        images101='https://res.cloudinary.com/allhailmc/image/upload/v1600949630/Eyez/eyezcloudinary/101.png',
+        images102='https://res.cloudinary.com/allhailmc/image/upload/v1600949630/Eyez/eyezcloudinary/102.png',
+        images103='https://res.cloudinary.com/allhailmc/image/upload/v1600949630/Eyez/eyezcloudinary/103.png',
+        images104='https://res.cloudinary.com/allhailmc/image/upload/v1600949629/Eyez/eyezcloudinary/104.png',
+        images105='https://res.cloudinary.com/allhailmc/image/upload/v1600949629/Eyez/eyezcloudinary/105.png',
+        images106='https://res.cloudinary.com/allhailmc/image/upload/v1600949629/Eyez/eyezcloudinary/106.png',
+        images107='https://res.cloudinary.com/allhailmc/image/upload/v1600949629/Eyez/eyezcloudinary/107.png',
+        images108='https://res.cloudinary.com/allhailmc/image/upload/v1600949629/Eyez/eyezcloudinary/108.png',
+        images109='https://res.cloudinary.com/allhailmc/image/upload/v1600949629/Eyez/eyezcloudinary/109.png'];
+        images.forEach( item => console.log(item))
+        const makeImages = () =>
+         console.log(images)
+         images.forEach( (item, i) => {
+             const newImage = document.createElement('images');
+             const randoImage = newImage.shuffle(images)[(Math.random()*109)];
+             newImage.className = 'eyeImage';
+             newImage.style.backgroundImage = randoImage;
+             images[i] = newImages;
+             myCanvas.appendChild(newDiv);
+             console.log(randoImage);
+             })
+             function setup(){
+                 return makeImages();
+                 }
+                 function draw(){
+                     images.forEach(div =>{
+                         div.style.top = `${counter}px`;})
+                         counter+=5;
+                         if(counter< 375){setTimeout(draw, 100);}}
+                         setup();
+                         draw();
+                         console.log(divs)
+                         document.getElementById('actualeyeTYPE').onclick = function changeContent(){
+
+                         }
+                         function changeImage() {
+                             if (document.getElementById("imgClickAndChange").src == "eyezyes/92.png"); 
+                             {
+                                 (document.getElementById("imgClickAndChange").src = "makeImages()");
+                             }
+                         }
+                            </script>
+                         </head>
+                    </body>
+                 </html>

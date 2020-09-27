@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"name": "backc",
+			"path": "../backc"
+		},
+		{
+			"name": "eyezyes",
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "eyezyes",
+		"liveServer.settings.port": 5501
+	}
+}
